@@ -1,0 +1,54 @@
+﻿@model DS_ArthurGOAREGUER.Models.Resultat
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Resultat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Championnat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Championnat.Nom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Personne1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Personne1.DateNaissance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Personne2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Personne2.DateNaissance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Score1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Score2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateDebut)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateDebut)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

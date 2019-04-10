@@ -1,0 +1,36 @@
+﻿@model DS_ArthurGOAREGUER.Models.Organisation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Organisation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tournoi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tournoi.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Personne)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Personne.DateNaissance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poste)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poste.Nom)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

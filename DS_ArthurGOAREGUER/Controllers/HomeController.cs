@@ -15,17 +15,13 @@ namespace DS_ArthurGOAREGUER.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Carte()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Reglement()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 

@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using DS_ArthurGOAREGUER.Models;
 
 namespace DS_ArthurGOAREGUER
 {
@@ -33,6 +35,9 @@ namespace DS_ArthurGOAREGUER
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<MVC_DS_ArthurGOAREGUERContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("MVC_DS_ArthurGOAREGUERContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
