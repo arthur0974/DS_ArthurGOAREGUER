@@ -10,7 +10,7 @@ namespace DS_ArthurGOAREGUER.Models
     {
         public int Id { get; set; }
 
-        [StringLength(150, MinimumLength = 2), Required(ErrorMessage = "Le nom du jeu doit contenir au minimum 2 caractères.")]
+        [StringLength(50, MinimumLength = 2), Required(ErrorMessage = "Le nom du jeu doit contenir au minimum 2 caractères.")]
         public string Nom { get; set; }
     }
 }

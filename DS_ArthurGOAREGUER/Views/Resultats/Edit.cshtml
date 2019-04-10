@@ -1,12 +1,12 @@
 ﻿@model DS_ArthurGOAREGUER.Models.Resultat
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Modifier";
 }
 
-<h2>Edit</h2>
+<h2>Modifier</h2>
 
-<h4>Resultat</h4>
+<h4>Résultat</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -44,14 +44,14 @@
                 <span asp-validation-for="DateDebut" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Enregistrer" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retour</a>
 </div>
 
 @section Scripts {

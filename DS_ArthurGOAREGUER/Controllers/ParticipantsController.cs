@@ -49,7 +49,7 @@ namespace DS_ArthurGOAREGUER.Controllers
         public IActionResult Create()
         {
             ViewData["ChampionnatId"] = new SelectList(_context.Championnat, "Id", "Nom");
-            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "DateNaissance");
+            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "PrenomNom");
             return View();
         }
 
@@ -67,7 +67,7 @@ namespace DS_ArthurGOAREGUER.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ChampionnatId"] = new SelectList(_context.Championnat, "Id", "Nom", participant.ChampionnatId);
-            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "DateNaissance", participant.PersonneId);
+            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "PrenomNom", participant.PersonneId);
             return View(participant);
         }
 
@@ -85,7 +85,7 @@ namespace DS_ArthurGOAREGUER.Controllers
                 return NotFound();
             }
             ViewData["ChampionnatId"] = new SelectList(_context.Championnat, "Id", "Nom", participant.ChampionnatId);
-            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "DateNaissance", participant.PersonneId);
+            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "PrenomNom", participant.PersonneId);
             return View(participant);
         }
 
@@ -122,7 +122,7 @@ namespace DS_ArthurGOAREGUER.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ChampionnatId"] = new SelectList(_context.Championnat, "Id", "Nom", participant.ChampionnatId);
-            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "DateNaissance", participant.PersonneId);
+            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "PrenomNom", participant.PersonneId);
             return View(participant);
         }
 

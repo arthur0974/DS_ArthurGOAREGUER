@@ -1,10 +1,10 @@
 ﻿@model DS_ArthurGOAREGUER.Models.Personne
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nouveau";
 }
 
-<h2>Create</h2>
+<h2>Nouveau</h2>
 
 <h4>Personne</h4>
 <hr />
@@ -34,23 +34,30 @@
             </div>
             <div class="form-group">
                 <label asp-for="DateNaissance" class="control-label"></label>
-                <input asp-for="DateNaissance" class="form-control" />
-                <span asp-validation-for="DateNaissance" class="text-danger"></span>
+                <input asp-for="DateNaissance" id="DateNaissance" class="form-control" />
+                <span asp-validation-for="DateNaissance" class="text-danger">
+                    <asp:RangeValidator ID="RangeValidator1" runat="server"
+                    ControlToValidate="DateNaissance" ErrorMessage="Vous devez avoir 18 ans minimum."
+                    MaximumValue="1/1/2001" MinimumValue="1/1/1900" Type="Date"></asp:RangeValidator>
+                </span>
             </div>
             <div class="form-group">
                 <label asp-for="Sexe" class="control-label"></label>
-                <input asp-for="Sexe" class="form-control" />
+                <select asp-for="Sexe" class="form-control">
+                    <option value="F">Femme</option>
+                    <option value="H">Homme</option>
+                </select>
                 <span asp-validation-for="Sexe" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Enregistrer" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retour</a>
 </div>
 
 @section Scripts {

@@ -50,8 +50,8 @@ namespace DS_ArthurGOAREGUER.Controllers
         public IActionResult Create()
         {
             ViewData["ChampionnatId"] = new SelectList(_context.Championnat, "Id", "Nom");
-            ViewData["Personne1Id"] = new SelectList(_context.Personne, "Id", "DateNaissance");
-            ViewData["Personne2Id"] = new SelectList(_context.Personne, "Id", "DateNaissance");
+            ViewData["Personne1Id"] = new SelectList(_context.Personne, "Id", "PrenomNom");
+            ViewData["Personne2Id"] = new SelectList(_context.Personne, "Id", "PrenomNom");
             return View();
         }
 
@@ -69,8 +69,8 @@ namespace DS_ArthurGOAREGUER.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ChampionnatId"] = new SelectList(_context.Championnat, "Id", "Nom", resultat.ChampionnatId);
-            ViewData["Personne1Id"] = new SelectList(_context.Personne, "Id", "DateNaissance", resultat.Personne1Id);
-            ViewData["Personne2Id"] = new SelectList(_context.Personne, "Id", "DateNaissance", resultat.Personne2Id);
+            ViewData["Personne1Id"] = new SelectList(_context.Personne, "Id", "PrenomNom", resultat.Personne1Id);
+            ViewData["Personne2Id"] = new SelectList(_context.Personne, "Id", "PrenomNom", resultat.Personne2Id);
             return View(resultat);
         }
 
@@ -88,8 +88,8 @@ namespace DS_ArthurGOAREGUER.Controllers
                 return NotFound();
             }
             ViewData["ChampionnatId"] = new SelectList(_context.Championnat, "Id", "Nom", resultat.ChampionnatId);
-            ViewData["Personne1Id"] = new SelectList(_context.Personne, "Id", "DateNaissance", resultat.Personne1Id);
-            ViewData["Personne2Id"] = new SelectList(_context.Personne, "Id", "DateNaissance", resultat.Personne2Id);
+            ViewData["Personne1Id"] = new SelectList(_context.Personne, "Id", "PrenomNom", resultat.Personne1Id);
+            ViewData["Personne2Id"] = new SelectList(_context.Personne, "Id", "PrenomNom", resultat.Personne2Id);
             return View(resultat);
         }
 
@@ -126,8 +126,8 @@ namespace DS_ArthurGOAREGUER.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ChampionnatId"] = new SelectList(_context.Championnat, "Id", "Nom", resultat.ChampionnatId);
-            ViewData["Personne1Id"] = new SelectList(_context.Personne, "Id", "DateNaissance", resultat.Personne1Id);
-            ViewData["Personne2Id"] = new SelectList(_context.Personne, "Id", "DateNaissance", resultat.Personne2Id);
+            ViewData["Personne1Id"] = new SelectList(_context.Personne, "Id", "PrenomNom", resultat.Personne1Id);
+            ViewData["Personne2Id"] = new SelectList(_context.Personne, "Id", "PrenomNom", resultat.Personne2Id);
             return View(resultat);
         }
 

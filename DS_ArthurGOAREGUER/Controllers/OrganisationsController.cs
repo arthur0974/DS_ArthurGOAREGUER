@@ -49,7 +49,7 @@ namespace DS_ArthurGOAREGUER.Controllers
         // GET: Organisations/Create
         public IActionResult Create()
         {
-            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "DateNaissance");
+            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "PrenomNom");
             ViewData["PosteId"] = new SelectList(_context.Set<Poste>(), "Id", "Nom");
             ViewData["TournoiId"] = new SelectList(_context.Set<Tournoi>(), "Id", "Description");
             return View();
@@ -68,7 +68,7 @@ namespace DS_ArthurGOAREGUER.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "DateNaissance", organisation.PersonneId);
+            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "PrenomNom", organisation.PersonneId);
             ViewData["PosteId"] = new SelectList(_context.Set<Poste>(), "Id", "Nom", organisation.PosteId);
             ViewData["TournoiId"] = new SelectList(_context.Set<Tournoi>(), "Id", "Description", organisation.TournoiId);
             return View(organisation);
@@ -87,7 +87,7 @@ namespace DS_ArthurGOAREGUER.Controllers
             {
                 return NotFound();
             }
-            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "DateNaissance", organisation.PersonneId);
+            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "PrenomNom", organisation.PersonneId);
             ViewData["PosteId"] = new SelectList(_context.Set<Poste>(), "Id", "Nom", organisation.PosteId);
             ViewData["TournoiId"] = new SelectList(_context.Set<Tournoi>(), "Id", "Description", organisation.TournoiId);
             return View(organisation);
@@ -125,7 +125,7 @@ namespace DS_ArthurGOAREGUER.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "DateNaissance", organisation.PersonneId);
+            ViewData["PersonneId"] = new SelectList(_context.Set<Personne>(), "Id", "PrenomNom", organisation.PersonneId);
             ViewData["PosteId"] = new SelectList(_context.Set<Poste>(), "Id", "Nom", organisation.PosteId);
             ViewData["TournoiId"] = new SelectList(_context.Set<Tournoi>(), "Id", "Description", organisation.TournoiId);
             return View(organisation);

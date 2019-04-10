@@ -1,10 +1,10 @@
 ﻿@model DS_ArthurGOAREGUER.Models.Participant
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Détails";
 }
 
-<h2>Details</h2>
+<h2>Détails</h2>
 
 <div>
     <h4>Participant</h4>
@@ -20,7 +20,7 @@
             @Html.DisplayNameFor(model => model.Personne)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Personne.DateNaissance)
+            @Html.DisplayFor(model => model.Personne.PrenomNom)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Equipe)
@@ -31,6 +31,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Modifier</a> |
+    <a asp-action="Index">Retour</a>
 </div>

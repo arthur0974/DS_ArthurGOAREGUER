@@ -1,14 +1,14 @@
 ﻿@model DS_ArthurGOAREGUER.Models.Resultat
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Supprimer";
 }
 
-<h2>Delete</h2>
+<h2>Supprimer</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Êtes-vous sûr de vouloir supprimer ceci ?</h3>
 <div>
-    <h4>Resultat</h4>
+    <h4>Résultat</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -21,13 +21,13 @@
             @Html.DisplayNameFor(model => model.Personne1)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Personne1.DateNaissance)
+            @Html.DisplayFor(model => model.Personne1.PrenomNom)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Personne2)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Personne2.DateNaissance)
+            @Html.DisplayFor(model => model.Personne2.PrenomNom)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Score1)
@@ -51,7 +51,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Supprimer" class="btn btn-default" /> |
+        <a asp-action="Index">Retour</a>
     </form>
 </div>
